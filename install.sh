@@ -1,4 +1,5 @@
 #!/bin/bash
+cp -rf .gitconfig ~/
 cp -rf .bash* ~/
 cp -rf .vimrc ~/
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
