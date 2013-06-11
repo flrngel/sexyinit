@@ -1,5 +1,5 @@
 execute pathogen#infect()
-colo Dark2
+colo torte
 syntax on
 set nu
 set ts=2
