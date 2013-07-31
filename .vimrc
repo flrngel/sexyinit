@@ -12,3 +12,9 @@ set cin
 set cinoptions+=j1
 filetype plugin indent on
 
+" Remember last cursor position
+au BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\ exe "norm g`\"" |
+\ endif
+
