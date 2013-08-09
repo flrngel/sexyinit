@@ -20,3 +20,5 @@ git clone git://github.com/tpope/vim-bundler.git
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/mmalecki/vim-node.js.git
 git clone https://github.com/kchmck/vim-coffee-script.git
+
+source ~/.bashrc
