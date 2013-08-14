@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # git settings
+echo "# Git Setting"
+read -p "Your git user name : " username
+read -p "Your git user email : " useremail
+echo -e "[user]" > .gitconfig
+echo -e "\tname = $username" >> .gitconfig
+echo -e "\temail = $useremail" >> .gitconfig
 
 cp -rf .gitconfig ~/
 
