@@ -12,6 +12,9 @@ set cin
 set cinoptions+=j1
 set backspace=2
 set backspace=indent,eol,start
+
+" set vim yank unlimit
+set viminfo='100,h
 filetype plugin indent on
 
 " Remember last cursor position
