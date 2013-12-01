@@ -11,6 +11,8 @@ git config --global core.editor vim
 # bash settings
 cp -rf .bash* ~/
 
+# npm setting
+echo "prefix = $PATH/.npm/" > ~/.npmrc
 
 # vim settings 
 cp -rf .vimrc ~/
