@@ -7,6 +7,7 @@ read -p "Your git user email : " useremail
 git config --global user.name $username
 git config --global user.email $useremail
 git config --global core.editor vim
+git config --global i18n.commitEncoding 'utf8'
 
 # bash settings
 cp -rf .bash* ~/
