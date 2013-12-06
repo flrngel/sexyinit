@@ -131,4 +131,10 @@ algorithmFunction(){
 	./$1
 }
 
+algorithmFunction2(){
+	mv $1 $1.old
+	vim $1
+}
+
 alias crun=algorithmFunction
+alias vnew=algorithmFunction2
