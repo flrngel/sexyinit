@@ -13,7 +13,7 @@ git config --global i18n.commitEncoding 'utf8'
 cp -rf .bash* ~/
 
 # npm setting
-echo "prefix = $PATH/.npm/" > ~/.npmrc
+echo "prefix = $HOME/.npm/" > ~/.npmrc
 
 # vim settings 
 cp -rf .vimrc ~/
