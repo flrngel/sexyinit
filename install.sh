@@ -18,7 +18,7 @@ echo "prefix = $HOME/.npm/" > ~/.npmrc
 # vim settings 
 cp -rf .vimrc ~/
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
-curl -Sso ~/.vim/autoload/pathogen.vim \
+curl -L -Sso ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 cd ~/.vim/bundle
