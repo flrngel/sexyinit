@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Requirement
+# GIT
+
 # git settings
-echo "# Git Setting"
+echo "# Git Setting ( Press just Enter if you don't want to set )"
+cp -rf .selected_editor ~/
 read -p "Your git user name : " username
 read -p "Your git user email : " useremail
 git config --global user.name $username
@@ -22,11 +26,13 @@ curl -Sso ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 cd ~/.vim/bundle
-git clone git://github.com/tpope/vim-rails.git
-git clone git://github.com/tpope/vim-bundler.git
-git clone git://github.com/pangloss/vim-javascript.git
-git clone git://github.com/mmalecki/vim-node.js.git
-git clone git://github.com/kchmck/vim-coffee-script.git
-git clone git://github.com/groenewege/vim-less.git
+git clone https://github.com/tpope/vim-rails.git
+git clone https://github.com/tpope/vim-bundler.git
+git clone https://github.com/pangloss/vim-javascript.git
+git clone https://github.com/mmalecki/vim-node.js.git
+git clone https://github.com/kchmck/vim-coffee-script.git
+git clone https://github.com/groenewege/vim-less.git
+git clone https://github.com/junegunn/seoul256.vim.git
+git clone 
 
-source ~/.bashrc
+echo "execute command: \"source ~/.bash_profile\""

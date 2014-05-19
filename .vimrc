@@ -1,5 +1,10 @@
 execute pathogen#infect()
-colo torte
+
+" color
+colo seoul256
+let g:seoul256_background=233
+
+"
 syntax on
 set nu
 set ts=2
