@@ -115,6 +115,7 @@ fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.npm/bin # Add NPM to PATH for scripting
+PATH=$PATH:./node_modules/.bin # NPM Relative PATH
 PATH=$PATH:/usr/bin:/usr/bin/bash
 PATH=$PATH:/bin
 ANT_PATH=/usr/local/apache-ant
