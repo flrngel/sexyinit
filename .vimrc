@@ -18,6 +18,9 @@ set cinoptions+=j1
 set backspace=2
 set backspace=indent,eol,start
 
+" Markdown Plugin
+let g:vim_markdown_folding_disabled=1
+
 " set vim yank unlimit
 set viminfo='100,h
 filetype plugin indent on

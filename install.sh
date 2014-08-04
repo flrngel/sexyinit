@@ -35,5 +35,6 @@ git clone https://github.com/groenewege/vim-less.git
 git clone https://github.com/junegunn/seoul256.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kien/ctrlp.vim.git
+git clone https://github.com/plasticboy/vim-markdown.git
 
 echo "execute command: \"source ~/.bash_profile\""
