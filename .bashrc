@@ -121,6 +121,11 @@ PATH=$PATH:/bin
 ANT_PATH=/usr/local/apache-ant
 PATH=$PATH:$ANT_PATH/bin
 
+## GOPATH
+export GOHOME=$HOME/go
+export GOPATH=$GOHOME
+PATH=$PATH:$GOHOME/bin
+
 ### colors key 00=default 01=bold 04=underline 05=flash 07=reverse 08=concealed                                                                                     
 ### font 31=red 32=green 33=orange 34=blue 35=purple 36=cyan 37=grey 90=dk_grey 91=lt_red 92=lt_green 93=yellow 94=lt_blue 95=lt_purple 96=turqoise 97=white
 ### background 40=black 41=red 42=green 43=orange 44=blue 45=purple 46=cyan 47=grey 100=dk_grey 101=lt_red 102=lt_green 103=yellow 104=lt_blue 105=lt_purple 106=turquoise
@@ -130,15 +135,15 @@ export LS_COLORS
 
 ### algorithm setting
 
-algorithmFunction(){
+gccCompileAndRun(){
 	g++ -o $1 $1.cpp
 	./$1
 }
 
-algorithmFunction2(){
+moveToOldAndWriteNewFile(){
 	mv $1 $1.old
 	vim $1
 }
 
-alias crun=algorithmFunction
-alias vnew=algorithmFunction2
+alias crun=gccCompileAndRun
+alias vnew=moveToOldAndWriteNewFile
