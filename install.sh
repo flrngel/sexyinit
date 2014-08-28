@@ -13,6 +13,8 @@ git config --global user.email $useremail
 git config --global core.editor vim
 git config --global i18n.commitEncoding 'utf8'
 
+cat .gitconfig >> ~/.gitconfig
+
 # bash settings
 cp -rf .bash* ~/
 
@@ -36,5 +38,7 @@ git clone https://github.com/junegunn/seoul256.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/plasticboy/vim-markdown.git
+# need mercurial ( apt-get install -y mercurial )
+git clone https://github.com/fatih/vim-go.git
 
 echo "execute command: \"source ~/.bash_profile\""
