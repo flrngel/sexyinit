@@ -3,8 +3,13 @@
 # Requirement
 # GIT
 
+mv ~/.gitconfig ~/.old_gitconfig
+mv ~/.bash_rc ~/.old_bashrc
+mv ~/.bash_profile ~/.old_bashprofile
+
 # git settings
 echo "# Git Setting ( Press just Enter if you don't want to set )"
+
 cp -rf .selected_editor ~/
 read -p "Your git user name : " username
 read -p "Your git user email : " useremail
@@ -38,6 +43,7 @@ git clone https://github.com/junegunn/seoul256.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/plasticboy/vim-markdown.git
+git clone https://github.com/tpope/vim-fugitive.git
 # need mercurial ( apt-get install -y mercurial )
 git clone https://github.com/fatih/vim-go.git
 
