@@ -4,7 +4,7 @@
 # GIT
 
 mv ~/.gitconfig ~/.old_gitconfig
-mv ~/.bash_rc ~/.old_bashrc
+mv ~/.bashrc ~/.old_bashrc
 mv ~/.bash_profile ~/.old_bashprofile
 
 # git settings
