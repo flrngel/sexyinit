@@ -123,7 +123,7 @@ PATH=$PATH:$ANT_PATH/bin
 
 ## GOPATH
 export GOROOT=$HOME/go
-export GOPATH=$GOROOT/pkg
+export GOPATH=$GOROOT
 PATH=$PATH:$GOROOT/bin
 
 ### colors key 00=default 01=bold 04=underline 05=flash 07=reverse 08=concealed                                                                                     
