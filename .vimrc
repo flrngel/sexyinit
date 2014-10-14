@@ -23,6 +23,9 @@ set smartcase
 " Markdown Plugin
 let g:vim_markdown_folding_disabled=1
 
+" wildignore for ctrlp
+set wildignore+=*/node_modules/*
+
 " set vim yank unlimit
 set viminfo='100,h
 filetype plugin indent on
