@@ -49,9 +49,10 @@ if [ -n "$force_color_prompt" ]; then
 	fi
 fi
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
-fi
+# if osx
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#	. $(brew --prefix)/etc/bash_completion
+#fi
 
 BLUE=`tput setf 1`
 GREEN=`tput setf 2`
