@@ -7,7 +7,7 @@ let g:seoul256_background=233
 "
 syntax on
 set nu
-set ts=2
+" set ts=2
 set sw=2
 set sts=2
 set showmatch
@@ -19,12 +19,14 @@ set backspace=2
 set backspace=indent,eol,start
 set ignorecase
 set smartcase
+set expandtab
 
 " Markdown Plugin
 let g:vim_markdown_folding_disabled=1
 
 " wildignore for ctrlp
 set wildignore+=*/node_modules/*
+set wildignore+=*/tmp/*
 
 " set vim yank unlimit
 set viminfo='100,h
