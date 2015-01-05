@@ -6,6 +6,7 @@
 mv ~/.gitconfig ~/.old_gitconfig
 mv ~/.bashrc ~/.old_bashrc
 mv ~/.bash_profile ~/.old_bashprofile
+mv ~/.irbrc ~/.old_irbrc
 
 # git settings
 echo "# Git Setting ( Press just Enter if you don't want to set )"
@@ -47,5 +48,8 @@ git clone https://github.com/tpope/vim-fugitive.git
 # need mercurial ( apt-get install -y mercurial )
 git clone https://github.com/fatih/vim-go.git
 git clone git://github.com/slim-template/vim-slim.git
+
+# irbrc setting
+cp -rf .irbrc ~/
 
 echo "execute command: \"source ~/.bash_profile\""
