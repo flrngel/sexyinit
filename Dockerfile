@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-RUN apt-get install -yq git curl python3
+RUN apt-get install -yq git curl python
 RUN mkdir /sexyinit
 WORKDIR /sexyinit
 ADD . /sexyinit
