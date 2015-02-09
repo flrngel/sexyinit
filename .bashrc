@@ -25,12 +25,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-	xterm-color) color_prompt=yes;;
+  xterm-color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -39,14 +39,14 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-		# We have color support; assume it's compliant with Ecma-48
-		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-		# a case would tend to support setf rather than setaf.)
-		color_prompt=yes
-	else
-		color_prompt=
-	fi
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+  else
+    color_prompt=
+  fi
 fi
 
 # if osx
@@ -63,31 +63,31 @@ YELLOW=`tput setf 6`
 WHITE=`tput setf 7`
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[${RED}\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\[${RED}\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-	PS1='${debian_chroot:+($debian_chroot)}[\[\033[01;91m\]\u@\h\[\033[00m\]]:\w\$ '
+  PS1='${debian_chroot:+($debian_chroot)}[\[\033[01;91m\]\u@\h\[\033[00m\]]:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-	xterm*|rxvt*)
-		PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-		;;
-	*)
-		;;
+  xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+  *)
+    ;;
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
-	#alias dir='dir --color=auto'
-	#alias vdir='vdir --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  #alias dir='dir --color=auto'
+  #alias vdir='vdir --color=auto'
 
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -107,14 +107,14 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-	. /etc/bash_completion
+  . /etc/bash_completion
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -141,14 +141,36 @@ export LS_COLORS
 ### algorithm setting
 
 gccCompileAndRun(){
-	g++ -o $1 $1.cpp
-	./$1
+  g++ -o $1 $1.cpp
+  ./$1
 }
 
 moveToOldAndWriteNewFile(){
-	mv $1 $1.old
-	vim $1
+  mv $1 $1.old
+  vim $1
 }
 
+randomstring(){
+  return $(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1)
+}
+
+sexyinitupdate(){
+  if [ `builtin type -p curl` ]; then
+    $current_sha=$(cat ~/.sexyinit_sha)
+    $head_sha=$(curl -s https://api.github.com/repos/flrngel/sexyinit/git/refs/heads/master | python -c "import sys,json; print(json.load(sys.stdin)['object']['sha']);")
+
+    if [ "$current_sha" -ne "$head_sha" ]; then
+      if [ ! -d $HOME/.sexyinit ]; then
+        git clone https://github.com/flrngel/sexyinit $HOME/.sexyinit
+      else
+        cd $HOME/.sexyinit
+        git fetch; git checkout master; git reset origin/master --hard
+      fi
+      $HOME/.sexyinit/install.sh
+    fi
+  fi
+}
+
+alias dl='sudo docker ps -l -q'
 alias crun=gccCompileAndRun
 alias vnew=moveToOldAndWriteNewFile
