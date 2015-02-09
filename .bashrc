@@ -160,6 +160,7 @@ sexyinitupdate(){
     $head_sha=$(curl -s https://api.github.com/repos/flrngel/sexyinit/git/refs/heads/master | python -c "import sys,json; print(json.load(sys.stdin)['object']['sha']);")
 
     if [ "$current_sha" -ne "$head_sha" ]; then
+      echo "Updating to latest sexyinit..\n"
       if [ ! -d $HOME/.sexyinit ]; then
         git clone https://github.com/flrngel/sexyinit $HOME/.sexyinit
       else
