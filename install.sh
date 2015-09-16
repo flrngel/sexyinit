@@ -18,6 +18,8 @@ git config --global user.name $username
 git config --global user.email $useremail
 git config --global core.editor vim
 git config --global i18n.commitEncoding 'utf8'
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
 
 cat .gitconfig >> ~/.gitconfig
 
