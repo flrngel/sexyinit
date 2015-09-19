@@ -53,6 +53,7 @@ git clone https://github.com/tpope/vim-fugitive.git
 # need mercurial ( apt-get install -y mercurial )
 git clone https://github.com/fatih/vim-go.git
 git clone git://github.com/slim-template/vim-slim.git
+git clone https://github.com/ekalinin/Dockerfile.vim.git
 
 cd ~/.sexyinit
 git rev-parse HEAD > ~/.sexyinit_sha
