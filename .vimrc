@@ -20,6 +20,7 @@ set backspace=indent,eol,start
 set ignorecase
 set smartcase
 set expandtab
+set hlsearch
 
 " Markdown Plugin
 let g:vim_markdown_folding_disabled=1
