@@ -21,6 +21,7 @@ set ignorecase
 set smartcase
 set expandtab
 set hlsearch
+highlight MatchParen cterm=bold ctermbg=lightgreen ctermfg=magenta
 
 " Markdown Plugin
 let g:vim_markdown_folding_disabled=1
