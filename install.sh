@@ -44,7 +44,8 @@ git clone https://github.com/tpope/vim-bundler.git
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/mmalecki/vim-node.js.git
 git clone https://github.com/kchmck/vim-coffee-script.git
-git clone https://github.com/groenewege/vim-less.git
+#git clone https://github.com/groenewege/vim-less.git
+git clone https://github.com/hail2u/vim-css3-syntax
 git clone https://github.com/junegunn/seoul256.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kien/ctrlp.vim.git
