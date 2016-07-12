@@ -28,7 +28,12 @@ let g:vim_markdown_folding_disabled=1
 
 " wildignore for ctrlp
 set wildignore+=*/node_modules/*
+set wildignore+=*/build/*
+set wildignore+=*/dst/*
 set wildignore+=*/tmp/*
+
+" set keyword
+set iskeyword+=\-
 
 " set vim yank unlimit
 set viminfo='100,h
