@@ -34,6 +34,7 @@ set wildignore+=*/tmp/*
 
 " set keyword
 set iskeyword+=\-
+set iskeyword+=\_
 
 " set vim yank unlimit
 set viminfo='100,h
