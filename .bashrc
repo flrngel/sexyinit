@@ -172,6 +172,16 @@ sexyinitupdate(){
   fi
 }
 
+infloop() {
+time=$1
+shift
+while :
+do
+  sleep $time
+  $@
+done
+}
+
 alias dl='sudo docker ps -l -q'
 alias crun=gccCompileAndRun
 alias vnew=moveToOldAndWriteNewFile
