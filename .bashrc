@@ -182,6 +182,15 @@ do
 done
 }
 
+f_deploy() {
+  # master to production
+  git checkout master
+  git tag $(date +%Y-%m-%d_%H%M%S)
+  git checkout -B production
+  git push origin master production --tags
+  git checkout master
+}
+
 alias dl='sudo docker ps -l -q'
 alias crun=gccCompileAndRun
 alias vnew=moveToOldAndWriteNewFile
