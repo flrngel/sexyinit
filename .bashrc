@@ -191,6 +191,9 @@ f_deploy() {
   git checkout master
 }
 
+function swap() { mv $1 $1._tmp; mv $2 $1; mv $1._tmp $2; }
+
 alias dl='sudo docker ps -l -q'
 alias crun=gccCompileAndRun
 alias vnew=moveToOldAndWriteNewFile
+alias ts="date +'%s'"
