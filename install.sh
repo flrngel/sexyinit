@@ -48,7 +48,7 @@ git clone https://github.com/kchmck/vim-coffee-script.git
 git clone https://github.com/hail2u/vim-css3-syntax
 git clone https://github.com/junegunn/seoul256.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
-git clone https://github.com/kien/ctrlp.vim.git
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/plasticboy/vim-markdown.git
 git clone https://github.com/tpope/vim-fugitive.git
 # need mercurial ( apt-get install -y mercurial )
