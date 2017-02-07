@@ -7,3 +7,4 @@
   st = status
   co = checkout
   b = branch
+  ls = ls-file
