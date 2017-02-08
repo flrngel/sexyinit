@@ -4,6 +4,9 @@ execute pathogen#infect()
 colo seoul256
 let g:seoul256_background=233
 
+" ctrlp setting
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 "
 syntax on
 set nu
