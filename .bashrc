@@ -197,3 +197,7 @@ alias dl='sudo docker ps -l -q'
 alias crun=gccCompileAndRun
 alias vnew=moveToOldAndWriteNewFile
 alias ts="date +'%s'"
+
+if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
+  source "${VIRTUAL_ENV}/bin/activate"
+fi
