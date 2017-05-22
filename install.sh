@@ -34,7 +34,7 @@ cp -rf .irbrc ~/
 cp -rf .tmux.conf ~/
 
 # npm setting
-echo "prefix = $HOME/.npm/" > ~/.npmrc
+# echo "prefix = $HOME/.npm/" > ~/.npmrc
 
 # vim settings 
 cp -rf .vimrc ~/
