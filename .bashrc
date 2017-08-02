@@ -179,6 +179,9 @@ while :
 do
   sleep $time
   $@
+  if [[ $? -eq 0 ]]; then
+    break
+  fi
 done
 }
 
