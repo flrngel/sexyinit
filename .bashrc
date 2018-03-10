@@ -185,6 +185,11 @@ do
 done
 }
 
+safe() {
+  export HISTCONTROL=ignorespace
+  export HISTFILE=/dev/null
+}
+
 f_deploy() {
   # master to production
   git checkout master
