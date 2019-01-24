@@ -205,6 +205,10 @@ alias dl='sudo docker ps -l -q'
 alias crun=gccCompileAndRun
 alias vnew=moveToOldAndWriteNewFile
 alias ts="date +'%s'"
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias s3='aws s3'
+alias git='LC_ALL=en_US git'
+alias tttt="awk -v OFS="\t" '$1=$1'"
 
 if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
   source "${VIRTUAL_ENV}/bin/activate"
