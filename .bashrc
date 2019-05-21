@@ -190,6 +190,10 @@ safe() {
   export HISTFILE=/dev/null
 }
 
+today() {
+  date +%y%m%d
+}
+
 f_deploy() {
   # master to production
   git checkout master
